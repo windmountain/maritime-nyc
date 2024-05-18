@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/windmountain/calagator
-  revision: 10a9fe85655c927f4da697b0c3ef02f046a27aa1
-  branch: maritime
+  revision: cd5456d4e86f454145c0f609901855a23d2303b5
+  branch: maritime2
   specs:
     calagator (4.1.0)
       activemodel-serializers-xml (~> 1.0)
@@ -10,7 +10,6 @@ GIT
       bluecloth (~> 2.2)
       bootsnap (~> 1.16)
       demingfactor-ri_cal (~> 0.10.0)
-      devise (~> 4.9)
       font-awesome-rails (~> 4.7)
       formtastic (~> 5.0)
       geokit (>= 1.9, < 1.14)
@@ -129,7 +128,6 @@ GEM
       rake (>= 10.4, < 14.0)
     ast (2.4.2)
     base64 (0.2.0)
-    bcrypt (3.1.20)
     bigdecimal (3.1.8)
     bindex (0.8.1)
     bluecloth (2.2.0)
@@ -153,12 +151,6 @@ GEM
       irb (~> 1.10)
       reline (>= 0.3.8)
     demingfactor-ri_cal (0.10.0)
-    devise (4.9.4)
-      bcrypt (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 4.1.0)
-      responders
-      warden (~> 1.2.3)
     domain_name (0.6.20240107)
     drb (2.2.1)
     erubi (1.12.0)
@@ -246,7 +238,6 @@ GEM
     nokogiri (1.16.5-arm64-darwin)
       racc (~> 1.4)
     observer (0.1.2)
-    orm_adapter (0.5.0)
     paper_trail (15.1.0)
       activerecord (>= 6.1)
       request_store (~> 1.4)
@@ -316,9 +307,6 @@ GEM
       io-console (~> 0.5)
     request_store (1.7.0)
       rack (>= 1.4)
-    responders (3.1.1)
-      actionpack (>= 5.2)
-      railties (>= 5.2)
     rest-client (2.1.0)
       http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
@@ -400,8 +388,6 @@ GEM
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
       public_suffix
-    warden (1.2.9)
-      rack (>= 2.0.9)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)

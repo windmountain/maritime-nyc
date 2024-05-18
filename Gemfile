@@ -62,4 +62,5 @@ group :development, :test do
   gem "faker", "~> 2.2"
 end
 
-gem "calagator", git: "https://github.com/windmountain/calagator", branch: "maritime"
+gem "calagator", git: "https://github.com/windmountain/calagator", branch: "maritime2"
+# gem "calagator", path: "../calagator"
