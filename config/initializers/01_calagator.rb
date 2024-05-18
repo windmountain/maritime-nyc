@@ -29,17 +29,14 @@ Calagator.setup do |config|
   # NOTE: Venues can still be created by events, so it's probably best to put them in same category as events.
   #
   # Resources in this category can only be CRUDed by admin users.
-  config.admin_resources = %i[changes]
+  # config.admin_resources = %i[changes]
   # Resources in this category can be CRUDed by any authenticated user.
-  config.user_resources = %i[events venues]
+  # config.user_resources = %i[events venues]
 
   # Optional username and password to use when accessing /admin pages
-  config.admin_email = 'zach@maritime.nyc'
+  # config.admin_email = 'zach@maritime.nyc' # enable if using Devise
   config.admin_username = 'zach'
   config.admin_password = ENV['CALAGATOR_ADMIN_PASSWORD']
-
-  # Emoji used as administrator icon
-  config.admin_icon = '🐙'
 
   # Search engine to use for searching events.
   # Values: :sql, :sunspot.
