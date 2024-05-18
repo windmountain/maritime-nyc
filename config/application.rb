@@ -17,7 +17,9 @@ module Maritimecalendar
     config.autoload_lib(ignore: %w(assets tasks))
 
     config.active_record.yaml_column_permitted_classes = [
-      Symbol, Date, Time, ActiveSupport::TimeWithZone, ActiveSupport::TimeZone
+      Symbol, Date, Time, ActiveSupport::TimeWithZone, ActiveSupport::TimeZone,
+      ActsAsTaggableOn::TagList,
+      ActsAsTaggableOn::DefaultParser
     ]
 
 
