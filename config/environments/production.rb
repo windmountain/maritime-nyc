@@ -89,10 +89,11 @@ Rails.application.configure do
   config.active_record.sqlite3_production_warning = false
 
   # Enable DNS rebinding protection and other `Host` header attacks.
-  # config.hosts = [
-  #   "example.com",     # Allow requests from example.com
-  #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
-  # ]
+  config.hosts = [
+    "maritime.nyc",      # Allow requests from maritime.nyc
+    /.*\.maritime\.nyc/, # Allow requests from subdomains like `www.example.com`
+    "maritimenyc.production"
+  ]
   # Skip DNS rebinding protection for the default health check endpoint.
-  # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 end
