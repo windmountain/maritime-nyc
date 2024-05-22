@@ -1,0 +1,19 @@
+      <div id="maritime_header">
+        <%= link_to root_path do %>
+          <h1>New York City Maritime Calendar</h1>
+        <% end %>
+
+        <nav id='maritime_app_menu'>
+          <ul>
+              <li class='<%=link_class[:events]%>'><%= link_to "Events", events_path %></li>
+              <li class='<%=link_class[:venues]%>'><%= link_to "Venues", venues_path %></li>
+          </ul>
+        </nav>
+      </div>
+
+      <% # Pick a subnav %>
+
+      <%= render(:partial => 'calagator/events/subnav') if link_class[:events] == 'active' %>
+      <%= render(:partial => 'calagator/venues/subnav') if link_class[:venues] == 'active' %>
+      <%= render(:partial => 'calagator/sources/subnav') if link_class[:import] == 'active' %>
+

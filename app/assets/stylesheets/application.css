@@ -15,3 +15,65 @@
  *= require calagator
  */
 
+#maritime_header, #maritime_header nav ul {
+  background: #1f2486;
+}
+
+#maritime_header h1 {
+  color: #fff;
+}
+
+#maritime_header nav ul, .maritime-subnav ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  gap: 1.5em;
+}
+
+#maritime_header h1 {
+  color: white;
+  padding-top: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 3em;
+}
+
+#maritime_header h1,
+#maritime_header nav ul,
+.maritime-subnav ul {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+#maritime_header nav ul {
+  background: #1f2486;
+}
+
+.maritime-subnav ul {
+  background: #1b26f0;
+}
+
+#maritime_header nav ul li a,
+.maritime-subnav ul li a,
+#maritime_header nav ul li a:visited,
+.maritime-subnav ul li a:visited {
+  color: #fff;
+  display: block;
+  padding: 0.5em 0;
+}
+
+#maritime_header nav ul li,
+.maritime-subnav ul li {
+  font-size: 1.3em;
+}
+
+#maritime_header nav ul li {
+  font-weight: 700;
+}
+
+#maritime_header nav ul li.active {
+  background: url("nav_marker.gif") no-repeat center bottom;
+}
+.maritime_subnav.maritime_active {
+  background: url("subnav_marker.gif") no-repeat center bottom;
+}
