@@ -1,14 +1,21 @@
-      <div id="maritime_header">
-        <%= link_to root_path do %>
-          <h1>New York City Maritime Calendar</h1>
-        <% end %>
+      <div id="global_header">
 
-        <nav id='maritime_app_menu'>
-          <ul>
-              <li class='<%=link_class[:events]%>'><%= link_to "Events", events_path %></li>
-              <li class='<%=link_class[:venues]%>'><%= link_to "Venues", venues_path %></li>
-          </ul>
-        </nav>
+        <button class="menu" data-expandable="top_menu">Menu</button>
+        <a href="/" id="project_title">
+          <abbr>NYC</abbr>
+          <span>Maritime</span>
+          <span>Calendar</span>
+        </a>
+        <button class="search" data-expandable="search">Search</button>
+        <div id="top_menu" aria-hidden="true">
+          <div id='app_menu'>
+            <ul>
+                <li class='<%=link_class[:events]%>'><%= link_to "Events", events_path %></li>
+                <li class='<%=link_class[:venues]%>'><%= link_to "Venues", venues_path %></li>
+            </ul>
+          </div>
+          <%= render partial: 'layouts/calagator/global_search' %>
+        </div>
       </div>
 
       <% # Pick a subnav %>

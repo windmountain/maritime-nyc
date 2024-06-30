@@ -1,0 +1,54 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+
+:root {
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-size: 100% 1rlh;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+header,
+main,
+aside,
+footer {
+  padding: 1rlh;
+  margin-block-end: 1rlh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+[data-expandable]:focus {
+  outline: 2px solid #005C9C;
+  outline-offset: 1px;
+}

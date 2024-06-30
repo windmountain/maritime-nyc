@@ -12,68 +12,139 @@
  *
  *= require_tree .
  *= require_self
- *= require calagator
  */
 
-#maritime_header, #maritime_header nav ul {
-  background: #1f2486;
-}
-
-#maritime_header h1 {
-  color: #fff;
-}
-
-#maritime_header nav ul, .maritime-subnav ul {
-  list-style: none;
-  margin: 0;
-  display: flex;
-  gap: 1.5em;
-}
-
-#maritime_header h1 {
+body {
+  background: #036;
   color: white;
-  padding-top: 20px;
-  margin-bottom: 0;
-  font-weight: normal;
-  font-size: 3em;
+  font-family: sans-serif;
 }
 
-#maritime_header h1,
-#maritime_header nav ul,
-.maritime-subnav ul {
-  padding-left: 35px;
-  padding-right: 35px;
+a {
+  color: white;
 }
 
-#maritime_header nav ul {
-  background: #1f2486;
+#tagcloud .spacer:last-child {
+  display: none;
 }
 
-.maritime-subnav ul {
-  background: #1b26f0;
+.hidden {
+  display: none;
 }
 
-#maritime_header nav ul li a,
-.maritime-subnav ul li a,
-#maritime_header nav ul li a:visited,
-.maritime-subnav ul li a:visited {
-  color: #fff;
-  display: block;
-  padding: 0.5em 0;
+*[aria-hidden="true"] {
+  display: none;
 }
 
-#maritime_header nav ul li,
-.maritime-subnav ul li {
-  font-size: 1.3em;
+#today h3,
+#tomorrow h3,
+#next_two_weeks h3 {
+  background: white;
+  color: #036;
+  margin: 1rlh;
+  text-align: center;
 }
 
-#maritime_header nav ul li {
-  font-weight: 700;
+#today,
+#tomorrow,
+#next_two_weeks {
+  // background: #eee;
 }
 
-#maritime_header nav ul li.active {
-  background: url("nav_marker.gif") no-repeat center bottom;
+.event_list {
+  // background: white;
 }
-.maritime_subnav.maritime_active {
-  background: url("subnav_marker.gif") no-repeat center bottom;
+
+.event_list li {
+  // background: #ddd;
+}
+
+.list_date {
+  // background: lightgreen;
+}
+
+.list_content .description,
+.list_content .url:last-child {
+  display: none;
+}
+
+#project_title {
+  color: inherit;
+  text-decoration: none;
+}
+
+#project_title abbr,
+#project_title span:first-of-type,
+#project_title span:last-of-type {
+  text-transform: uppercase;
+  line-height: 300%;
+}
+
+#today h3,
+#tomorrow h3,
+#next_two_weeks h3 {
+  font-weight: bold;
+  margin-top: 1rlh;
+}
+
+#today .list_date,
+#tomorrow .list_date {
+  display: none;
+}
+
+.list_date > div:first-child {
+  display: inline;
+}
+
+.event_list li {
+  margin-top: 1rlh;
+  list-style-type: none;
+  margin: 1rlh;
+}
+
+#whats_happening {
+  margin-bottom: 1rlh;
+}
+
+.event_list .summary {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#global_header {
+  background: white;
+  color: #036;
+  text-align: center;
+  top: 0;
+  position: sticky;
+  isolation: isolate;
+  height: 2rlh;
+}
+
+#global_header a {
+  font-weight: bold;
+}
+
+#global_header button {
+  position: absolute;
+  top: 0;
+  height: 2rlh;
+  width: 2rlh;
+  font-size: 60%;
+  background: white;
+  border: none;
+}
+
+#global_header button.menu {
+  left: 0;
+}
+
+#global_header button.search {
+  right: 0;
+}
+
+.maritime-subnav,
+#whats_happening > h1:first-child,
+#whats_happening > h3:first-of-type {
+  display: none;
 }
