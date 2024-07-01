@@ -1,12 +1,16 @@
       <div id="global_header">
 
-        <button class="menu" data-expandable="top_menu">Menu</button>
+        <button class="menu" data-expandable="top_menu" aria-label="Menu">
+          <%= inline_svg_tag "menu.svg" %>
+        </button>
         <a href="/" id="project_title">
           <abbr>NYC</abbr>
           <span>Maritime</span>
           <span>Calendar</span>
         </a>
-        <button class="search" data-expandable="search">Search</button>
+        <button class="search" data-expandable="search" aria-label="Search">
+          <%= inline_svg_tag "search.svg" %>
+        </button>
         <div id="top_menu" aria-hidden="true">
           <div id='app_menu'>
             <ul>

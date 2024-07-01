@@ -14,14 +14,29 @@
  *= require_self
  */
 
+:root {
+  --first-color: white;
+  --second-color: #036;
+  --third-color: #f60;
+}
+
+*:focus,
+*:focus *,
+[data-expandable]:focus,
+[data-expandable]:focus * {
+  outline: none;
+  fill: var(--third-color);
+  color: var(--third-color);
+}
+
 body {
-  background: #036;
-  color: white;
+  background: var(--second-color);
+  color: var(--first-color);
   font-family: sans-serif;
 }
 
 a {
-  color: white;
+  color: var(--first-color);
 }
 
 #tagcloud .spacer:last-child {
@@ -39,24 +54,10 @@ a {
 #today h3,
 #tomorrow h3,
 #next_two_weeks h3 {
-  background: white;
-  color: #036;
+  background: var(--first-color);
+  color: var(--second-color);
   margin: 1rlh;
   text-align: center;
-}
-
-#today,
-#tomorrow,
-#next_two_weeks {
-  // background: #eee;
-}
-
-.event_list {
-  // background: white;
-}
-
-.event_list li {
-  // background: #ddd;
 }
 
 .list_date {
@@ -112,8 +113,8 @@ a {
 }
 
 #global_header {
-  background: white;
-  color: #036;
+  background: var(--first-color);
+  color: var(--second-color);
   text-align: center;
   top: 0;
   position: sticky;
@@ -131,8 +132,12 @@ a {
   height: 2rlh;
   width: 2rlh;
   font-size: 60%;
-  background: white;
+  background: var(--first-color);
   border: none;
+}
+
+#global_header button:not(:focus) svg {
+  fill: var(--second-color);
 }
 
 #global_header button.menu {
@@ -143,7 +148,6 @@ a {
   right: 0;
 }
 
-.maritime-subnav,
 #whats_happening > h1:first-child,
 #whats_happening > h3:first-of-type {
   display: none;
