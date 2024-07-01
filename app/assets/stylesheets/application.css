@@ -154,23 +154,22 @@ a {
 }
 
 #top_menu {
-  z-index: 2;
-  text-align: initial;
-  background: var(--second-color);
   position: fixed;
+  z-index: 2;
   top: 0;
   height: 100%;
   width: var(--top-menu-width);
+  background: var(--second-color);
   border-right: 1px solid var(--first-color);
+  text-align: initial;
 }
 
 button#top_menu_backdrop {
-  z-index: 1;
-  display: block;
-  width: 100%;
-  height: 100%;
   position: fixed;
+  z-index: 1;
   top: 0;
+  height: 100%;
+  width: 100%;
   pointer-events: none;
   background: none;
 }
@@ -188,7 +187,6 @@ button#top_menu_backdrop {
   left: calc(-1 * var(--top-menu-width));
   transition: left 0.2s;
 }
-
 
 #top_menu button.menu-close {
   background: none;
