@@ -3,6 +3,35 @@
         <button class="menu" data-expandable="top_menu" aria-label="Menu">
           <%= inline_svg_tag "menu.svg" %>
         </button>
+        <div id="top_menu" aria-hidden="true">
+          <button class="menu-close" data-collapsable="top_menu" aria-label="Close Menu"> <!-- double check a11y -->
+            <%= inline_svg_tag "x.svg" %>
+          </button>
+          <!--
+          <div id='app_menu'>
+            <ul>
+                <li class='<%=link_class[:events]%>'><%= link_to "Events", events_path %></li>
+                <li class='<%=link_class[:venues]%>'><%= link_to "Venues", venues_path %></li>
+            </ul>
+          </div>
+          -->
+          <div id="events_subnav" class="subnav">
+            <ul>
+              <li><%= link_to 'Browse events', root_url %></li>
+              <li><%= link_to 'Add an event', new_event_url %></li>
+              <li><%= link_to 'Import events', new_source_url %></li>
+            </ul>
+          </div>
+          <div id="venues_subnav" class="subnav">
+            <ul>
+              <li><%= link_to 'Browse venues', venues_url %></li>
+              <li><%= link_to 'Add a venue', new_venue_url %></li>
+            </ul>
+          </div>
+          <%= render partial: 'layouts/calagator/global_search' %>
+        </div>
+        <button id="top_menu_backdrop" data-collapsable="top_menu"></button>
+
         <a href="/" id="project_title">
           <abbr>NYC</abbr>
           <span>Maritime</span>
@@ -11,20 +40,4 @@
         <button class="search" data-expandable="search" aria-label="Search">
           <%= inline_svg_tag "search.svg" %>
         </button>
-        <div id="top_menu" aria-hidden="true">
-          <div id='app_menu'>
-            <ul>
-                <li class='<%=link_class[:events]%>'><%= link_to "Events", events_path %></li>
-                <li class='<%=link_class[:venues]%>'><%= link_to "Venues", venues_path %></li>
-            </ul>
-          </div>
-          <%= render partial: 'layouts/calagator/global_search' %>
-        </div>
       </div>
-
-      <% # Pick a subnav %>
-
-      <%= render(:partial => 'calagator/events/subnav') if link_class[:events] == 'active' %>
-      <%= render(:partial => 'calagator/venues/subnav') if link_class[:venues] == 'active' %>
-      <%= render(:partial => 'calagator/sources/subnav') if link_class[:import] == 'active' %>
-
